@@ -16,7 +16,7 @@ var ai = API.shuffle([
     		   {image:'Asian1.jpg'},
                 {image: 'Asian2.jpg'},
                 {image: 'Asian3.jpg'},
-				{image: 'Asian4.jpg'}, 
+{image: 'Asian4.jpg'}, 
 {image: 'Asian5.jpg'}, 
 {image: 'Asian6.jpg'}
 			], 
