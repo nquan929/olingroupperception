@@ -16,9 +16,9 @@ var ai = API.shuffle([
     		   {image:'Asian1.jpg'},
                 {image: 'Asian2.jpg'},
                 {image: 'Asian3.jpg'},
-{image: 'Asian4.jpg'}, 
-{image: 'Asian5.jpg'}, 
-{image: 'Asian6.jpg'}
+		{image: 'Asian4.jpg'}, 
+		{image: 'Asian5.jpg'}, 
+		{image: 'Asian6.jpg'}
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -34,9 +34,9 @@ var ai = API.shuffle([
     		     {image: 'White1.jpg'},
                 {image: 'White2.jpg'},
                 {image: 'White3.jpg'},
-				{image: 'White4.jpg'}, 
+		{image: 'White4.jpg'}, 
                 {image: 'White5.jpg'},
-				{image: 'White6.jpg'}
+		{image: 'White6.jpg'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
