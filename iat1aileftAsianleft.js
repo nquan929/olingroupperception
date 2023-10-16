@@ -1,86 +1,100 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/nquan929/olingroupperception@IAT/quiat1.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
-var ai = API.shuffle([
-            'Code', 'Robot', 'Algorithm', 'Program', 'ChatGPT', 'Automation']);
-  var human = API.shuffle([
-            'Consciousness', 'Mind', 'Free Will', 'Emotion', 'Intention', 'Morality']);
+var posWords = API.shuffle([
+            'Love', 'Cheer', 'Friend', 'Pleasure', 
+            'Adore', 'Cheerful', 'Friendship', 'Joyful', 
+            'Smiling','Cherish', 'Excellent', 'Glad', 
+            'Joyous', 'Spectacular', 'Appealing', 'Delight', 
+            'Excitement', 'Laughing', 'Attractive','Delightful', 
+            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful', 
+            'Fantastic', 'Happy', 'Lovely', 'Terrific', 
+            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
+  var negWords = API.shuffle([
+            'Abuse', 'Grief', 'Poison', 'Sadness', 
+            'Pain', 'Despise', 'Failure', 'Nasty', 
+            'Angry', 'Detest', 'Horrible', 'Negative', 
+            'Ugly', 'Dirty', 'Gross', 'Evil', 
+            'Rotten','Annoy', 'Disaster', 'Horrific',  
+            'Scorn', 'Awful', 'Disgust', 'Hate', 
+            'Humiliate', 'Selfish', 'Tragic', 'Bothersome', 
+            'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
 	return iatExtension({
 		category1 : {
-			name : 'Asian Americans', //Will appear in the data.
+			name : 'Disabled Persons', //Will appear in the data.
 			title : {
-				media : {word : 'Asian Americans'}, //Name of the category presented in the task.
+				media : {word : 'Disabled Persons'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		   {image:'Asian1.jpg'},
-                {image: 'Asian2.jpg'},
-                {image: 'Asian3.jpg'},
-		{image: 'Asian4.jpg'}, 
-		{image: 'Asian5.jpg'}, 
-		{image: 'Asian6.jpg'}
+    		   {image: 'disabled1.jpg'},
+                {image: 'disabled2.jpg'},
+                {image: 'disabled3.jpg'},
+				{image: 'disabled4.jpg'}  
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 		category2 :	{
-			name : 'White Americans', //Will appear in the data.
+			name : 'Abled Persons', //Will appear in the data.
 			title : {
-				media : {word : 'White Americans'}, //Name of the category presented in the task.
+				media : {word : 'Abled Persons'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		     {image: 'White1.jpg'},
-                {image: 'White2.jpg'},
-                {image: 'White3.jpg'},
-		{image: 'White4.jpg'}, 
-                {image: 'White5.jpg'},
-		{image: 'White6.jpg'}
+    		     {image: 'abled1.jpg'},
+                {image: 'abled2.jpg'},
+                {image: 'abled3.jpg'},
+				{image: 'abled4.jpg'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 	attribute1 :
 		{
-			name : 'Human',
+			name : 'Bad',
 			title : {
-				media : {word : 'Human'},
+				media : {word : 'Bad'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-				{word: human[0]},
-				{word: human[1]},
-				{word: human[2]},
-				{word: human[3]},
-				{word: human[4]},
-				{word: human[5]}
+				{word: negWords[0]},
+				{word: negWords[1]},
+				{word: negWords[2]},
+				{word: negWords[3]},
+				{word: negWords[4]},
+				{word: negWords[5]},
+				{word: negWords[6]},
+				{word: negWords[7]}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 		},
 		attribute2 :
 		{
-			name : 'Artificial Intelligence',
+			name : 'Good',
 			title : {
-				media : {word : 'Artificial Intelligence'},
+				media : {word : 'Good'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-				{word: ai[0]},
-				{word: ai[1]},
-				{word: ai[2]},
-				{word: ai[3]},
-				{word: ai[4]},
-				{word: ai[5]}
+				{word: posWords[0]},
+				{word: posWords[1]},
+				{word: posWords[2]},
+				{word: posWords[3]},
+				{word: posWords[4]},
+				{word: posWords[5]},
+				{word: posWords[6]},
+				{word: posWords[7]}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 		},
 		base_url : {//Where are your images at?
-			image : 'https://github.com/nquan929/olingroupperception/tree/images'
+			image : 'https://baranan.github.io/minno-tasks/images/'
 		} 
 	});
 });
